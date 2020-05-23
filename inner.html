@@ -27,19 +27,74 @@
 
     <main>
       <section>
-        <h2>Фильтр</h2>
+        <h2 class="visually-hidden">Фильтр</h2>
 
-        <span>Найдено: 3</span>
-        <span>Сортировка:</span>
-        <ul>
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По рейтингу</li>
-        </ul>
+        <div class="container">
+          <form class="filter" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="pool" id="filter-pool" checked>
+                  <label for="filter-pool">Бассейн</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="parking" id="filter-parking">
+                  <label for="filter-parking">Парковка</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                  <label for="filter-wi-fi">Wi-fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <label for="filter-hotel">Гостиница</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="motel" id="filter-motel" checked>
+                  <label for="filter-motel">Мотель</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <label for="filter-apartments">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="filter-cost">
+              <label>Стоимость в сутки (р):</label>
+              <div class="cost">
+                <span>От</span>
+                <input type="text" name="min-cost" value="0">
+                <label>До</label>
+                <input type="text" name="max-cost" value="3000">
+              </div>
+              <div class="slider">
+                <div class="total-line"></div>
+                <div class="active-line" style="left: 0%; width: 78.48%;"></div>
+                <div class="left-slider round-slider" style="left: 0%;"></div>
+                <div class="right-slider round-slider" style="left: 78.48%;"></div>
+              </div>
+            </div>
+            <button type="submit">Показать</button>
+          </form>
 
-        <div>
-          <button>По возрастанию</button>
-          <button>по убыванию</button>
+          <span>Найдено: 3</span>
+          <span>Сортировка:</span>
+          <ul>
+            <li>По цене</li>
+            <li>По типу</li>
+            <li>По рейтингу</li>
+          </ul>
+
+          <div>
+            <button>По возрастанию</button>
+            <button>по убыванию</button>
+        </div>
         </div>
       </section>
 
@@ -92,13 +147,13 @@
     <footer>
       <div class="container">
         <section>
-          <h2>Контакты</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <span>#Visitsedona</span>
           <a href="tel:+74956660166">Tel: +7(495) 666-01-66</a>
         </section>
 
         <section>
-          <h2>Соцсети</h2>
+          <h2 class="visually-hidden">Соцсети</h2>
           <a href="https://twitter.com"><img src="img/twitter.svg" alt="Twitter"></a>
           <a href="https://www.facebook.com"><img src="img/facebook.svg" alt="Facebook"></a>
           <a href="https://www.youtube.com"><img src="img/youtube.svg" alt="Youtube"></a>

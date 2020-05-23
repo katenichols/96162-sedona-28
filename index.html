@@ -28,7 +28,7 @@
     <main>
       <section>
         <div class="container">
-          <h1>Sedona</h1>
+          <h1 class="visually-hidden">Sedona</h1>
           <img class="welcome" src="img/welcome.svg" width="457" height="351" alt="Welcome to the Sedona">
         </div>
       </section>
@@ -104,6 +104,31 @@
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <button type="button">Поиск гостиницы в Седоне</button>
+
+          <form class="search-of-hotel" action="https://echo.htmlacademy.ru" method="post">
+            <label>Дата заезда:
+              <input type="text" name="arrival-date" value="24 апреля 2017">
+            </label>
+            <label>Дата выезда:
+              <input type="text" name="departure-date" value="4 июля 2017">
+            </label>
+            <label>Взрослые:
+              <div class="counter">
+                <span class="minus">-</span>
+                <input type="number" name="number-of-adults" value="2">
+                <span class="plus">+</span>
+              </div>
+            </label>
+            <label>Дети:
+              <div class="counter">
+                <span class="minus">-</span>
+                <input type="number" name="number-of-children" value="0">
+                <span class="plus">+</span>
+              </div>
+            </label>
+            <button type="submit">Найти</button>
+          </form>
+
           <div>
             <img src="img/map.png" width="1199" height="594" alt="Месторасположение Седоны">
           </div>
@@ -114,13 +139,13 @@
     <footer>
       <div class="container">
         <section>
-          <h2>Контакты</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <span>Visitsedona</span>
           <a href="tel:+74956660166">Tel: +7(495) 666-01-66</a>
         </section>
 
         <section>
-          <h2>Соцсети</h2>
+          <h2 class="visually-hidden">Соцсети</h2>
           <a href="https://twitter.com"><img src="img/twitter.svg" alt="Twitter"></a>
           <a href="https://www.facebook.com"><img src="img/facebook.svg" alt="Facebook"></a>
           <a href="https://www.youtube.com"><img src="img/youtube.svg" alt="Youtube"></a>
