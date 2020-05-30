@@ -15,15 +15,14 @@
 @font-face {
   font-family: "PT Sans", sans-serif;
   src: url(fonts/ptsans.woff2) format(woff2),
-       url(fonts/ptsansbold.woff2) format(woff2),
        url(fonts/ptsans.woff) format(woff),
+       url(fonts/ptsansbold.woff2) format(woff2),
        url(fonts/ptsansbold.woff) format(woff);
        font-weight: normal;
        font-style: normal;
 }
 
 body {
-  min-width: 1220px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -38,8 +37,13 @@ a {
   text-decoration: none;
 }
 
-li {
+.user-nav,
+.icon-link-list,
+.filter-form ul,
+.features-list {
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 button,
@@ -70,13 +74,29 @@ input {
 }
 
 .main-nav {
-  width: 100%;
-  height: 56px;
+  background-color: var(--basic-white);
+}
+
+.user-nav-item-link {
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
   color: var(--basic-black);
-  background-color: var(--basic-white);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.user-nav-item-link:hover{
+  color: var(--basic-color);
+  text-shadow: none;
+}
+
+.user-nav-item-link:active{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.active-link .user-nav-item-link{
+  color: #766357;
+  text-shadow: none;
 }
 
 .welcome {
@@ -219,6 +239,15 @@ h2 {
   background-color: var(--special-light-color);
 }
 
+.search-form input:hover {
+  background-color: #ebebeb;
+}
+
+.search-form input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid #e5e5e5;
+}
+
 .search-form input[type=text] {
   display: inline-block;
   width: 346px;
@@ -229,6 +258,30 @@ h2 {
   display: inline-block;
   width: 114px;
   height: 38px;
+}
+
+.calendar-button:hover {
+
+}
+
+.calendar-button:active {
+
+}
+
+.minus:hover {
+
+}
+
+.minus:active {
+
+}
+
+.plus:hover {
+
+}
+
+.plus:active {
+
 }
 
 .search-form-button {
@@ -419,11 +472,8 @@ h2 {
 }
 
 .sort-button {
-  text-transform: uppercase;
-}
-
-.sort-button {
   color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
   border: 0;
   background-color: transparent;
   border-bottom: 1px dashed var(--basic-color);
@@ -432,6 +482,15 @@ h2 {
 .sort-button-active {
   color: var(--basic-color);
   background-color: transparent;
+  border: 0;
+}
+
+.sort-button:hover{
+  color: var(--basic-color);
+}
+
+.sort-button:active {
+  color: var(--basic-black);
   border: 0;
 }
 
@@ -453,11 +512,19 @@ h2 {
   height: 90px;
 }
 
-.hotels h4{
+.name-of-hotel {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: var(--basic-black);
+}
+
+.name-of-hotel:hover {
+  color: var(--basic-color);
+}
+
+.name-of-hotel:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .hotels span {
@@ -467,14 +534,14 @@ h2 {
   color: var(--special-dark-color);
 }
 
-.hotels a,
-.hotels button {
+.detail,
+.booking {
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
 }
 
-.hotels a {
+.detail {
   display: block;
   width: 110px;
   height: 27px;
@@ -483,12 +550,40 @@ h2 {
   border: 0;
 }
 
-.hotels button {
+.booking {
   width: 142px;
   height: 27px;
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: #766357;
+}
+
+.detail:hover,
+.search-form-button:hover,
+.social-network-link:hover {
+  background-color: var(--basic-light-color);
+}
+
+.detail:active,
+.search-form-button:active,
+.social-network-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: var(--basic-dark-color);
+}
+
+.booking:hover,
+.search-of-hotel-button:hover {
+  background-color: var(--dark-color);
+}
+
+.booking:active,
+.search-of-hotel-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: var(--dark-dark-color);
+}
+
+.social-network-link:active {
+
 }
 
 .stars {
@@ -504,4 +599,12 @@ h2 {
   width: 110px;
   height: 27px;
   background-color: var(--special-light-color);
+}
+
+.developers:hover {
+
+}
+
+.developers:active {
+
 }
