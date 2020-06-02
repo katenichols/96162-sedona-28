@@ -22,11 +22,19 @@
        font-style: normal;
 }
 
+.page {
+  height: 100%;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
 
-body {
+.page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  gap: 0;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -34,7 +42,7 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   color: var(--special-dark-color);
-  background-color: var(--basic-white);
+  background-color: var(--special-light-color);
 }
 
 a {
@@ -71,24 +79,32 @@ input {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .main-nav {
+  display: flex;
+  flex-direction: column;
   width: auto;
+  position: relative;
   background-color: var(--basic-white);
 }
 
 .logo {
+  position: absolute;
   float: left;
   width: 138px;
   min-height: 70px;
-  margin-left: 531px;;
-  /*margin-right: auto;*/
+  margin-left: 531px;
 }
 
 .user-nav {
-  margin-left: 72px;
-  margin-right: 72px;
+  display: flex;
+  justify-content: space-around;
+  width: 1054px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .user-nav-item {
@@ -109,29 +125,8 @@ input {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-nav-item:first-child {
-  width: 94px;
-  margin-right: 134px;
-}
-
-.user-nav-item:nth-child(2) {
-  width: 98px;
-  margin-right: 418px;
-}
-
-.user-nav-item:nth-child(3) {
-  width: 85px;
-  margin-right: 147px;
-}
-
 .active-link .user-nav-item-link{
   color: #766357;
-}
-
-.welcome {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 77px;
 }
 
 .welcome-section {
@@ -141,6 +136,20 @@ input {
   background-image: url(img/welcome_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 77px;
+}
+
+.welcome {
+  display: block;
+  width: 457px;
+  height: 351px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.features {
+
 }
 
 .features h3 {
@@ -182,6 +191,10 @@ input {
   color: var(--special-dark-color);
 }
 
+.normal {
+  background-color: #eeeeee;
+}
+
 .special-feature {
   width: 400px;
   height: 256px;
@@ -192,6 +205,7 @@ input {
 .special-feature p {
   color: var(--basic-white);
 }
+
 
 .icon-housing,
 .icon-food,
@@ -611,8 +625,12 @@ h2 {
   background-color: var(--dark-dark-color);
 }
 
-.social-network-link:active {
+.social-network-svg {
+  fill: var(--basic-white);
+}
 
+.social-network-link:active .social-network-svg {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .stars {
