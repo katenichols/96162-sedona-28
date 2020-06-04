@@ -145,11 +145,19 @@ input {
   height: 351px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 24px;
+}
 
+.welcome-figure {
+  display: block;
+  width: 1200px;
+  height: 57px;
+  background-image: url(img/figure.svg);
+  background-repeat: no-repeat;
 }
 
 .features {
-
+  
 }
 
 .features h3 {
@@ -172,7 +180,13 @@ input {
   color: var(--special-dark-color);
 }
 
+
 .feature-list {
+  display: grid;
+}
+
+.features-list-item {
+  
 }
 
 .features-list span {
@@ -191,6 +205,12 @@ input {
   color: var(--special-dark-color);
 }
 
+.special {
+  display: inline-block;
+  width: 120px;
+  height: 256px;
+}
+
 .normal {
   background-color: #eeeeee;
 }
@@ -206,6 +226,21 @@ input {
   color: var(--basic-white);
 }
 
+.special-feature-item {
+  display: inline-block;
+  width: 400px;
+  height: 256px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+..special-feature-item:first-child {
+  flex
+}
+
+.special-feature-img {
+    display: inline-block;
+}
 
 .icon-housing,
 .icon-food,
