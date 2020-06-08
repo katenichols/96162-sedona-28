@@ -724,7 +724,7 @@ input {
   margin-right: 13px;
 }
 
-.filter-form label {
+.filters-list-item label {
   position: relative;
   display: block;
   user-select: none;
@@ -779,6 +779,15 @@ input {
   position: relative;
   margin-top: 27px;
   margin-left: 10px;
+}
+
+.filter-cost-label {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  color: var(--basic-white);
 }
   
 
