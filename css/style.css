@@ -26,6 +26,8 @@
 }
 
 *, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -39,10 +41,21 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-::-webkit-input-placeholder {color: var(--basic-black);}
-::-moz-placeholder          {color: var(--basic-black);}
-:-moz-placeholder           {color: var(--basic-black);}
-:-ms-input-placeholder      {color: var(--basic-black);}
+::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+
+::-moz-placeholder {
+  color: var(--basic-black);
+}
+
+:-moz-placeholder {
+  color: var(--basic-black);
+}
+
+:-ms-input-placeholder {
+  color: var(--basic-black);
+}
 
 .page-body {
   position: relative;
@@ -54,6 +67,7 @@ input[type=number] {
   text-transform: uppercase;
   color: var(--special-dark-color);
   background-color: var(--special-light-color);
+  border: 0;
 }
 
 a {
@@ -162,13 +176,14 @@ input {
 
 .user-nav-item-link:hover{
   color: var(--basic-color);
+  cursor: pointer;
 }
 
 .user-nav-item-link:active{
   color: rgba(0, 0, 0, 0.3);
 }
 
-.active-link .user-nav-item-link{
+.active-link {
   color: #766357;
 }
 
@@ -188,7 +203,7 @@ input {
   height: 351px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
 }
 
 .welcome-figure {
@@ -214,6 +229,7 @@ input {
   text-align: center;
   color: var(--basic-black);
   margin-top: 43px;
+  margin-bottom: 17px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -221,6 +237,7 @@ input {
 .features-intro-text {
   display: block;
   margin-bottom: 51px;
+  margin-top: 0;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
@@ -271,6 +288,8 @@ input {
   color: var(--special-dark-color);
 }
 
+
+
 .special-feature {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -290,16 +309,16 @@ input {
 
 .special-feature-item:first-child {
   padding-top: 47px;
-  padding-right: 50px;
+  padding-right: 48px;
   padding-bottom: 54px;
-  padding-left: 51px;
+  padding-left: 49px;
 }
 
 .special-feature-item:last-child {
   padding-top: 50px;
   padding-right: 48px;
   padding-bottom: 51px;
-  padding-left: 51px;
+  padding-left: 50px;
 }
 
 .feature-points {
@@ -330,7 +349,7 @@ input {
 
 .feature-point:last-child {
   padding-top: 55px;
-  padding-right: 65px;
+  padding-right: 64px;
   padding-bottom: 81px;
   padding-left: 65px;
 }
@@ -379,7 +398,7 @@ input {
   text-align: center;
   padding-top: 47px;
   padding-bottom: 54px;
-  padding-left: 70px;
+  padding-left: 69px;
   padding-right: 70px;
 }
 
@@ -424,7 +443,6 @@ input {
 }
 
 .search-form {
-  /* display: none; */
   position: absolute;
   top: 86px;
   left: 50%;
@@ -493,6 +511,7 @@ input {
 
 .search-form-input:hover {
   background-color: #ebebeb;
+  cursor: pointer;
 }
 
 .search-form-input:focus {
@@ -565,6 +584,7 @@ input {
 .minus-button:hover,
 .plus-button:hover {
   fill: var(--basic-black);
+  cursor: pointer;
 }
 
 .calendar-button:active,
@@ -588,11 +608,15 @@ input {
   padding: 0;
 }
 
+.modal-map {
+  width: 1200px;
+  height: 594px;
+}
+
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 120px;
-  /* padding-top: 13px; */
   padding-bottom: 36px;
 }
 
@@ -677,6 +701,7 @@ input {
 
 .info-developers-link:hover {
   fill: var(--basic-color);
+  cursor: pointer;
 }
 
 .info-developers-link:active {
@@ -701,6 +726,10 @@ input {
   margin-top: 27px;
   margin-left: 72px;
   padding: 0;
+}
+
+.fieldset:last-child {
+  margin-left: 117px;
 }
 
 .fieldset-legend {
@@ -742,6 +771,10 @@ input {
   width: 23px;
   height: 23px;
   background-image: url(../img/checkbox-off.svg);
+}
+
+.filters-list-item-checkbox:hover + label::before {
+  cursor: pointer;
 }
 
 .filters-list-item-checkbox:checked + label::before {
@@ -794,7 +827,7 @@ input {
 .filter-cost-inputs {
   display: flex;
   position: relative;
-  width: 313px;
+  width: 317px;
   color: var(--basic-white);
   background-color: transparent;
   border: 2px solid var(--basic-white);
@@ -812,11 +845,12 @@ input {
 .filter-cost-input-min::-moz-placeholder,
 .filter-cost-input-max::-moz-placeholder {
   color: var(--basic-white);
- } 
+}
+ 
 .filter-cost-input-min:-moz-placeholder,
 .filter-cost-input-max:-moz-placeholder {
   color: var(--basic-white);
- } 
+} 
 
 .filter-cost-input-min:-ms-input-placeholder,
 .filter-cost-input-max:-ms-input-placeholder {
@@ -826,7 +860,7 @@ input {
 .filter-cost-input-min,
 .filter-cost-input-max {
   position: relative;
-  height: 36px;
+  height: 34px;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -834,12 +868,15 @@ input {
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: 4px;
   padding-right: 4px;
 }
 
 .filter-cost-input-min {
   width: 154px;
+  margin-right: 4px;
 }
 
 .filter-cost-input-max {
@@ -869,9 +906,11 @@ input {
   position: absolute;
   top: 9px;
   left: 0;
-  width: 313px;
+  width: 317px;
   height: 2px;
-  background-color: rgb(255, 255, 255, 0.3);
+  /* background-color: rgb(255, 255, 255, 0.3); */
+  background-color: var(--basic-white);
+  opacity: 0.3;
 }
 
 .active-line {
@@ -920,6 +959,7 @@ input {
   width: 5px;
   height: 5px;
   border-radius: 18px;
+  cursor: pointer;
 }
 
 .filter-form-button {
@@ -941,6 +981,7 @@ input {
 .filter-form-button:hover {
   color: var(--basic-black);
   background-color: var(--basic-white);
+  cursor: pointer;
 }
 
 .sorting {
@@ -954,7 +995,7 @@ input {
 
 .sorting-ui {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -974,15 +1015,17 @@ input {
 }
 
 .sort-method {
+  margin-top: 2px;
   color: var(--basic-black);
 }
 
 .sort-method-list {
   display: flex;
+  align-items: flex-start;
   list-style: none;
   padding: 0;
   margin-left: 40px;
-  margin-top: 0;
+  margin-top: -1px;
   margin-bottom: 0;
 }
 
@@ -1007,6 +1050,7 @@ input {
 
 .sort-button:hover{
   color: var(--basic-color);
+  cursor: pointer;
 }
 
 .sort-button:active {
@@ -1048,6 +1092,7 @@ input {
 
 .sorting-controls-btn:hover {
   fill: var(--basic-black);
+  cursor: pointer;
 }
 
 .sorting-controls-btn:active {
@@ -1070,7 +1115,11 @@ input {
 }
 
 .hotels-item-img-wrapper {
+  margin-top: 7px;
   margin-right: 29px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
 }
 
 .hotel-item-info-wrapper {
@@ -1086,11 +1135,12 @@ input {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  margin-top: 5px;
   margin-left: auto;
 }
 
 .hotel-item-star-wrapper {
-  margin-bottom: 50px;
+  margin-bottom: 42px;
 }
 
 .hotels-item-rating-level {
@@ -1105,6 +1155,7 @@ input {
 
 .hotels-item-info {
   display: flexbox;
+  padding: 0;
 }
 
 .hotels-item-img {
@@ -1114,7 +1165,7 @@ input {
 
 .hotel-item-title {
   margin-top: 0;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -1123,6 +1174,7 @@ input {
 
 .hotels-item:hover .hotel-item-title {
   color: var(--basic-color);
+  cursor: pointer;
 }
 
 .hotels-item:active .hotel-item-title {
@@ -1131,7 +1183,8 @@ input {
 
 .hotel-item-text {
   display: block;
-  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 15px;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -1162,6 +1215,7 @@ input {
 .search-form-button:hover,
 .social-network-link:hover {
   background-color: var(--basic-light-color);
+  cursor: pointer;
 }
 
 .hotel-item-btn:active,
@@ -1174,6 +1228,7 @@ input {
 .hotel-item-btn-booking:hover,
 .search-of-hotel-button:hover {
   background-color: var(--dark-color);
+  cursor: pointer;
 }
 
 .hotel-item-btn-booking:active,
