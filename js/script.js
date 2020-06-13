@@ -1,9 +1,9 @@
 let searchFormButton = document.querySelector(".search-of-hotel-button");
 let searchForm = document.querySelector(".search-form");
-let arrivalDate = searchForm.querySelector(".first-input-text");
-let departureDate = searchForm.querySelector(".second-input-text");
-let numberAdults = searchForm.querySelector(".first-input-number");
-let numberChildren = searchForm.querySelector(".second-input-number");
+let arrivalDate = searchForm.querySelector("[name=arrival-date]");
+let departureDate = searchForm.querySelector("[name=departure-date]");
+let numberAdults = searchForm.querySelector("[name=number-of-adults]");
+let numberChildren = searchForm.querySelector("[name=number-of-children]");
 
 let isStorageSupport = true;
 let storage = "";
@@ -24,14 +24,31 @@ searchFormButton.addEventListener("click", function(evt) {
         searchForm.classList.add("visually-hidden");
     }
 
-    if (storage) {
-        arrivalDate.value = storage;
-        numberAdults = storage;
-        departureDate.focus();
-        } else {
+    if (storage === "") {
         arrivalDate.focus();
-    }
+      } else {
+            arrivalDate.value = storage;
+            departureDate.focus();
+      }
+});
 
+searchForm.addEventListener("sumbit", function(evt) {
+    if (!arrivalDate.value && !numberAdults.value) {
+        evt.preventDefault();
+        console.log("Нужно ввести количество взрослых");
+    } else {
+        if (!numberAdults.value) {
+            evt.preventDefault();
+            console.log("Нужно ввести дату заезда и количество взрослых");
+        } else {
+            if (!arrivalDate.value) {
+                evt.preventDefault();
+                console.log("Нужно ввести дату заезда");
+            } else {
+                console.log("Счастливого пути!");
+            }
+        }
+    }
 });
 
 window.addEventListener("keydown", function (evt) {
