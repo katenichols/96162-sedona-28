@@ -807,6 +807,10 @@ input {
   background-image: url(../img/checkbox-on-dsb.svg);
 }
 
+.filters-list-item-checkbox:disabled + label {
+  color: #6a6a6a;
+}
+
 .filter-cost {
   display: block;
   position: relative;
@@ -823,7 +827,6 @@ input {
   color: var(--basic-white);
 }
   
-
 .filter-cost-inputs {
   display: flex;
   position: relative;
@@ -908,7 +911,6 @@ input {
   left: 0;
   width: 317px;
   height: 2px;
-  /* background-color: rgb(255, 255, 255, 0.3); */
   background-color: var(--basic-white);
   opacity: 0.3;
 }
@@ -1245,22 +1247,16 @@ input {
   fill: rgba(255, 255, 255, 0.3);
 }
 
-.visually-visible {
+.visually-on {
   animation-name: slideInDown;
-  animation-duration: 3s;
+  animation-duration: 0.6s;
 }
 
 @keyframes slideInDown {
   0% {
-    transform: translateY(-600px);
-  }
-  70% {
-    transform: translateY(-10px);
-  }
-  90% {
-    transform: translateY(30px);
+    transform: translate(-50%, -100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translate(-50%, 0%);
   }
 }
