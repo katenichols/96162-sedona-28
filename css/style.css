@@ -214,6 +214,11 @@ input {
   background-repeat: no-repeat;
 }
 
+.features {
+  position: relative;
+  z-index: 50;
+}
+
 .features-intro {
   width: 100%;
   background-color: var(--basic-white);
@@ -287,8 +292,6 @@ input {
 .feature-item-number {
   color: var(--special-dark-color);
 }
-
-
 
 .special-feature {
   display: grid;
@@ -385,6 +388,7 @@ input {
 
 .feature-point-title {
   display: inline-block;
+  vertical-align: auto;
   margin-bottom: 25px;
 }
 
@@ -402,32 +406,54 @@ input {
   padding-right: 70px;
 }
 
+.search-of-hotel {
+  position: relative;
+  z-index: 20;
+}
+
 .search-of-hotel-title {
+  position: relative;
+  display: block;
+  width: auto;
+  align-items: center;
   font-size: 30px;
   line-height: 21px;
   font-weight: bold;
   text-align: center;
   color: var(--basic-black);
-  margin-top: 58px;
-  margin-bottom: 35px;
+  background-color: var(--basic-white);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 58px;
+  padding-bottom: 35px;
+  z-index: 50;
 }
 
 .search-of-hotel-text {
+  position: relative;
+  display: block;
+  width: auto;
+  align-items: center;
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
   text-align: center;
   color: var(--special-dark-color);
+  background-color: var(--basic-white);
   margin-top: 0;
-  margin-bottom: 45px;
+  margin-bottom: 0;
+  padding-bottom: 45px;
+  z-index: 50;
 }
 
 .search-of-hotel-group {
   position: relative;
   width: auto;
+  z-index: 20;
 }
 
 .search-of-hotel-button {
+  position: relative;
   display: block;
   width: 568px;
   height: 86px;
@@ -440,11 +466,12 @@ input {
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: #766357;
+  z-index: 100;
 }
 
 .search-form {
   position: absolute;
-  top: 86px;
+  top: 291px;
   left: 50%;
   transform: translate(-50%, 0);
   width: 568px;
@@ -452,6 +479,7 @@ input {
   margin-right: auto;
   background-color: var(--basic-white);
   padding: 55px;
+  z-index: 5;
 }
 
 .search-form,
@@ -491,6 +519,7 @@ input {
 .search-form-label {
   flex-wrap: nowrap;
   display: inline-block;
+  vertical-align: auto;
   margin: 0;
   padding: 0;
 }
@@ -695,6 +724,7 @@ input {
   width: 115px;
   height: 41px;
   display: inline-block;
+  vertical-align: auto;
   margin-left: 8px;
   fill: var(--basic-black);
 }
@@ -1252,11 +1282,37 @@ input {
   animation-duration: 0.6s;
 }
 
+.search-form-error {
+  animation: shake 0.6s;
+}
+
 @keyframes slideInDown {
   0% {
     transform: translate(-50%, -100%);
   }
   100% {
     transform: translate(-50%, 0%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
