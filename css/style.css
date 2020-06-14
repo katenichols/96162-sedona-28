@@ -658,6 +658,7 @@ input {
 .modal-map {
   width: 1200px;
   height: 594px;
+  background-color: var(--basic-color);
 }
 
 .footer {
@@ -677,6 +678,7 @@ input {
   height: 120px;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.9);
+  z-index: 60;
 }
 
 .contacts {
