@@ -1,5 +1,6 @@
 let searchFormButton = document.querySelector(".search-of-hotel-button");
 let searchForm = document.querySelector(".search-form");
+let searchFormSubmit = document.querySelector(".search-form-button");
 let arrivalDate = searchForm.querySelector("[name=arrival-date]");
 let departureDate = searchForm.querySelector("[name=departure-date]");
 let numberAdults = searchForm.querySelector("[name=number-of-adults]");
@@ -7,6 +8,7 @@ let numberChildren = searchForm.querySelector("[name=number-of-children]");
 
 let isStorageSupport = true;
 let storage = "";
+
 
 searchForm.classList.add("visually-hidden");
 
@@ -40,6 +42,8 @@ searchForm.addEventListener("submit", function(evt) {
         searchForm.classList.remove("search-form-error");
         searchForm.offsetWidth = searchForm.offsetWidth;
         searchForm.classList.add("search-form-error");
+        arrivalDate.style.outline = "5px solid rgb(214, 9, 118, 0.5)";
+        numberAdults.style.outline = "5px solid rgb(214, 9, 118, 0.5)";
     } else {
         if (isStorageSupport) {
             localStorage.setItem("arrivalDate", arrivalDate.value);
