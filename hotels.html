@@ -18,10 +18,10 @@
             </a>
           </div>
           <ul class="user-nav">
-            <li class="user-nav-item"><a class="user-nav-item-link" href="#">Информация</a></li>
-            <li class="user-nav-item"><a class="user-nav-item-link" href="#">Фото и видео</a></li>
-            <li class="user-nav-item"><a class="user-nav-item-link" href="#">Карта штата</a></li>
-            <li class="user-nav-item"><a class="user-nav-item-link active-link" href="hotels.html">Гостиницы</a></li>
+            <li class="user-nav-item user-nav-item-left"><a class="user-nav-item-link" href="#">Информация</a></li>
+            <li class="user-nav-item user-nav-item-left"><a class="user-nav-item-link" href="#">Фото и видео</a></li>
+            <li class="user-nav-item user-nav-item-right"><a class="user-nav-item-link" href="#">Карта штата</a></li>
+            <li class="user-nav-item user-nav-item-right"><a class="user-nav-item-link" href="hotels.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -70,8 +70,8 @@
               <div class="filter-cost">
                 <label class="filter-cost-label">Стоимость в сутки (р):</label>
                 <div class="filter-cost-inputs">
-                  <input type="text" class="filter-cost-input-min" name="min-cost" placeholder="От 0">
-                  <input type="text" class="filter-cost-input-max" name="max-cost"placeholder="До 3000">
+                  <input type="text" class="filter-cost-input-min" name="min-cost" placeholder="От 0" maxlength="12">
+                  <input type="text" class="filter-cost-input-max" name="max-cost"placeholder="До 3000" maxlength="12">
                   <div class="filter-cost-inputs-separator"></div>
                 </div>
                 <div class="filter-cost-slider">
@@ -249,6 +249,6 @@
         </section>
       </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

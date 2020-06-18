@@ -137,6 +137,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   width: auto;
   min-height: 56px;
   position: relative;
@@ -151,38 +152,24 @@ input {
 }
 
 .user-nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 227px 1fr 1fr 227px;
+  grid-template-rows: auto;
+  align-content: center;
+  margin-left: 72px;
+  margin-right: 72px;
 }
 
 .user-nav-item {
   display: block;
-  width: 170px;
 }
 
-.user-nav-item:nth-child(1) {
+.user-nav-item-left {
   text-align: left;
-  margin-left: 71px;
-  margin-top: -1px;
 }
 
-.user-nav-item:nth-child(2) {
-  text-align: left;
-  margin-left: -200px;
-  margin-top: -1px;
-}
-
-.user-nav-item:nth-child(3) {
+.user-nav-item-right {
   text-align: right;
-  margin-right: -200px;
-  margin-top: -1px;
-
-}
-
-.user-nav-item:nth-child(4) {
-  text-align: right;
-  margin-right: 71px;
-  margin-top: -1px;
 }
 
 .user-nav-item-link {
@@ -893,7 +880,7 @@ input {
 .filter-cost-input-min::-webkit-input-placeholder,
 .filter-cost-input-max::-webkit-input-placeholder {
   color: var(--basic-white);
- } 
+} 
 
 .filter-cost-input-min::-moz-placeholder,
 .filter-cost-input-max::-moz-placeholder {
@@ -908,7 +895,27 @@ input {
 .filter-cost-input-min:-ms-input-placeholder,
 .filter-cost-input-max:-ms-input-placeholder {
   color: var(--basic-white);
- } 
+} 
+
+.filter-cost-input-min:focus::-webkit-input-placeholder,
+.filter-cost-input-max:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.filter-cost-input-min:focus::-moz-placeholder,
+.filter-cost-input-max:focus::-moz-placeholder {
+  color: transparent;
+}
+ 
+.filter-cost-input-min:focus:-moz-placeholder,
+.filter-cost-input-maxfocus:-moz-placeholder {
+  color: transparent;
+} 
+
+.filter-cost-input-min:focus:-ms-input-placeholder,
+.filter-cost-input-max:focus:-ms-input-placeholder {
+  color: transparent;
+} 
 
 .filter-cost-input-min,
 .filter-cost-input-max {
