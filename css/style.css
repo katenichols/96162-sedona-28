@@ -228,8 +228,13 @@ input {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.active-link {
-  color: #766357;
+.active-link,
+.active-link:hover,
+.active-link:active,
+.active-link:focus {
+  color: var(--nav-item-active-color);
+  outline: none;
+  cursor: default;
 }
 
 .welcome-section {
@@ -538,7 +543,7 @@ input {
   font-weight: bold;
   text-transform: uppercase;
   color: var(--basic-white);
-  background-color: #766357;
+  background-color: var(--nav-item-active-color);
 }
 
 .search-form {
@@ -1309,7 +1314,7 @@ input {
 
   color: var(--unique-dark-color);
 
-  background-color: #f2f2f2;
+  background-color: var(--special-light-color);
 }
 
 .hotels-item-info {
